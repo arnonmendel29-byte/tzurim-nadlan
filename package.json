@@ -2,7 +2,7 @@
   "name": "tzurim-nadlan",
   "private": true,
   "scripts": {
-    "dev": "node server.js",
-    "start": "node server.js"
+    "dev": "node dev-server.js",
+    "start": "node dev-server.js"
   }
 }
