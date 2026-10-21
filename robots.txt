@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# כשיהיה דומיין סופי, אפשר להוסיף:
+# Sitemap: https://example.com/sitemap.xml
