@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# כשיהיה דומיין סופי, אפשר להוסיף:
-# Sitemap: https://example.com/sitemap.xml
+Sitemap: https://arnonmendel29-byte.github.io/tzurim-nadlan/sitemap.xml
