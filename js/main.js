@@ -283,7 +283,8 @@
     var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var mobile = window.matchMedia("(max-width: 860px)").matches;
 
-    if (typeof window.initAnimatedContent === "function" && typeof gsap !== "undefined" && !reduce && !mobile) {
+    // Text entrances are a plain CSS opacity fade (css/premium5.css); GSAP slide reveals disabled.
+    if (false) {
       if (reduce) {
         nodes.forEach(function (node) {
           node.classList.add("is-in");
@@ -336,7 +337,7 @@
           observer.unobserve(entry.target);
         });
       },
-      { threshold: 0.14, rootMargin: "0px 0px -8% 0px" }
+      { threshold: 0, rootMargin: "0px 0px -6% 0px" }
     );
     nodes.forEach(function (node) {
       observer.observe(node);

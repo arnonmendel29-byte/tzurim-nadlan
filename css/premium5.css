@@ -1,0 +1,34 @@
+/* ===== Pass 5: all text entrances are one plain opacity fade ===== */
+/* Neutralise earlier rise / mask / clip effects on text */
+.hero-copy > *, .hero h1 > span, .hero-actions > *, .hero-copy .eyebrow::before {
+  animation: none !important; transform: none !important; clip-path: none !important;
+}
+.pm2-sec .section-intro h2, .section-intro h2, .contact h2 {
+  clip-path: none !important; transform: none !important; opacity: 1 !important; transition: none !important;
+}
+#services .service-index, #services .service-index > span { transform: none !important; }
+
+/* Section content: opacity only, all widths, no stagger */
+.js .reveal > .container > *,
+.js .reveal .about-grid > *,
+.js .reveal .contact-grid > * {
+  transform: none !important; transition-delay: 0s !important;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-copy { animation: pm5-fade .8s cubic-bezier(.22,.61,.36,1) .1s both; }
+  .pm-loading .hero-copy { animation-play-state: paused; }
+  .js .reveal > .container > *,
+  .js .reveal .about-grid > *,
+  .js .reveal .contact-grid > * {
+    opacity: 0; transition: opacity .7s cubic-bezier(.22,.61,.36,1) !important;
+  }
+  .js .reveal.is-in > .container > *,
+  .js .reveal.is-in .about-grid > *,
+  .js .reveal.is-in .contact-grid > * { opacity: 1; }
+}
+@keyframes pm5-fade { from { opacity: 0; } to { opacity: 1; } }
+
+/* Card/item reveal: opacity only (no rise) */
+.pm-item { transform: none; }
+.pm-item:not(.is-shown) { transform: none !important; }
