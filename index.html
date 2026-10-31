@@ -24,6 +24,8 @@
   <link rel="preload" href="assets/fonts/rubik-hebrew-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/scroll-stack.css">
+  <link rel="stylesheet" href="css/premium.css">
+  <link rel="stylesheet" href="css/premium2.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -69,6 +71,8 @@
 
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
+      <span class="hero-glow hero-glow--a" aria-hidden="true"></span>
+      <span class="hero-glow hero-glow--b" aria-hidden="true"></span>
       <div class="container hero-grid">
         <div class="hero-copy">
           <p class="eyebrow">צורים נדל״ן</p>
@@ -87,7 +91,9 @@
           <p class="hero-meta">מתווך ויועץ נדל״ן · סמנכ״ל שיווק ומכירות</p>
         </div>
         <figure class="hero-portrait">
-          <img src="assets/amrani.jpg" width="931" height="938" alt="עמרני ברששת, מתווך ויועץ נדל״ן" fetchpriority="high" decoding="async" sizes="(max-width: 860px) 92vw, 420px">
+          <span class="pm-frame"><img src="assets/amrani.jpg" width="931" height="938" alt="עמרני ברששת, מתווך ויועץ נדל״ן" fetchpriority="high" decoding="async" sizes="(max-width: 860px) 92vw, 420px"><span class="pm-curtain" aria-hidden="true"></span></span>
+          <span class="pm-corner" aria-hidden="true"></span>
+          <span class="pm-badge" aria-hidden="true"><img src="assets/logo.png" alt="" width="92" height="92"></span>
         </figure>
       </div>
     </section>
@@ -249,7 +255,8 @@
           <a class="btn btn-line" href="#contact">ליצירת קשר</a>
         </div>
         <figure class="about-portrait">
-          <img src="assets/amrani.jpg" width="931" height="938" alt="תמונת תדמית של עמרני ברששת" loading="lazy" decoding="async">
+          <span class="pm-frame"><img src="assets/amrani.jpg" width="931" height="938" alt="תמונת תדמית של עמרני ברששת" loading="lazy" decoding="async"></span>
+          <span class="pm-corner" aria-hidden="true"></span>
         </figure>
       </div>
     </section>
@@ -383,5 +390,7 @@
   <script src="js/listings.js" defer></script>
   <script src="js/scroll-stack.js" defer></script>
   <script src="js/main.js" defer></script>
+  <script src="js/premium.js" defer></script>
+  <script src="js/premium2.js" defer></script>
 </body>
 </html>

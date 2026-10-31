@@ -261,12 +261,12 @@
   }
 
   var ANIMATED_CONTENT_OPTS = {
-    distance: 100,
+    distance: 48,
     direction: "vertical",
-    duration: 0.8,
-    ease: "power3.out",
+    duration: 1.1,
+    ease: "expo.out",
     blur: 0,
-    stagger: 0.08,
+    stagger: 0.1,
     threshold: 0.1
   };
 
@@ -301,13 +301,9 @@
         window.initAnimatedContent(revealRoot(section), ANIMATED_CONTENT_OPTS);
       });
 
+      // Hero entrance is choreographed in css/premium.css; just make sure it is visible.
       var heroCopy = document.querySelector(".hero-copy");
-      if (heroCopy) {
-        window.initAnimatedContent(
-          heroCopy,
-          Object.assign({}, ANIMATED_CONTENT_OPTS, { trigger: "mount", delay: 0.05 })
-        );
-      }
+      if (heroCopy) heroCopy.style.visibility = "visible";
 
       if (typeof ScrollTrigger !== "undefined") {
         requestAnimationFrame(function () {
